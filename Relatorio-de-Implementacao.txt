@@ -1,0 +1,92 @@
+# RELATORIO DE IMPLEMENTACAO DE SERVICOS AWS
+
+Data: 18/01/2026
+Empresa: Abstergo Industries 
+Responsável: Fernando Iwamizu
+
+## Introducao
+Este relatorio apresenta o processo de implementacao de ferramentas na empresa Abstergo Industries, realizado por Fernando Iwamizu. O objetivo do projeto foi elencar 3 possíveis processos passiveis de implementacao de servicos AWS, com a finalidade de realizar diminuicao de custos imediatos.
+
+## Descricao do Projeto
+O projeto de implementacao de processos ferramentas foi dividido em 3 etapas, cada uma com seus objetivos especificos. 
+
+A) Projeto de Implementação AWS para Redução de Custos Operacionais
+Foco: serviços de pedido, roteamento e entrega entre fábrica → distribuidora e distribuidora → PDVs.
+
+B) Objetivo Geral
+Criar uma arquitetura em nuvem altamente escalável, automatizada e com custos otimizados para suportar pedidos, rastreamento logístico e integração com distribuidores, reduzindo despesas com infraestrutura, falhas operacionais e ineficiências no transporte.
+
+C) Arquitetura Proposta (Visao Geral)
+•	Front-end: Amazon CloudFront + S3 (portais de distribuidores e logística)
+•	Back-end: AWS Lambda + API Gateway (serviços de pedido, rastreamento e integração)
+•	Banco de Dados: Amazon DynamoDB (pedidos, status, distribuidores)
+•	Mensageria: Amazon SQS + SNS (eventos logísticos, notificações)
+•	Integração logística: AWS IoT Core (rastreamento de veículos e sensores)
+•	Analytics: Amazon QuickSight + Athena (custos, rotas, performance)
+•	Governança e FinOps: AWS Cost Explorer + Budgets
+
+
+A seguir, serao descritas as etapas e processos afetados do projeto:
+
+A) Migracao para Arquitetura Serverless para Eliminar Custos de Infraestrutura Ociosa
+Como reduz custos:
+•	Zero servidores dedicados
+•	Pagamento apenas por execução (Lambda, API Gateway, DynamoDB On-Demand)
+•	Escalabilidade automática sem necessidade de superdimensionamento
+Serviços-chave:
+•	AWS Lambda para processamento de pedidos e atualizações de status
+•	Amazon API Gateway para expor APIs aos distribuidores
+•	DynamoDB para armazenar pedidos com alta performance e baixo custo
+Impacto direto:
+•	Redução de até 70% em custos de TI comparado a servidores tradicionais
+•	Menos falhas e menos equipe dedicada a manutenção
+
+
+B) Otimizacao Logistica com IoT + Analytics para Reduzir Custos de Transporte
+
+Como reduz custos:
+•	Monitoramento em tempo real de veículos e cargas
+•	Identificação automática de rotas ineficientes
+•	Redução de perdas, extravios e atrasos
+•	Melhor planejamento de janelas de entrega
+Serviços-chave:
+•	AWS IoT Core para rastrear caminhões e sensores de temperatura (essencial para fármacos)
+•	Amazon Kinesis para ingestão de dados em tempo real
+•	Amazon QuickSight para dashboards de performance logística
+Impacto direto:
+•	Redução de até 20–30% em custos de transporte
+•	Menos devoluções por falhas de temperatura
+•	Melhor SLA com distribuidores
+
+
+C) Automação de Fluxos de Pedido e Entrega com Mensageria e Integração Assíncrona
+Como reduz custos:
+•	Elimina retrabalho e erros manuais
+•	Evita gargalos em horários de pico
+•	Permite integração simples com múltiplos distribuidores e transportadoras
+Serviços-chave:
+•	Amazon SQS para filas de pedidos
+•	Amazon SNS para notificação de distribuidores e transportadoras
+•	AWS Step Functions para orquestrar processos (pedido → separação → transporte → entrega)
+Impacto direto:
+•	Redução de até 40% em custos operacionais internos
+•	Menos erros de processamento
+•	Aumento da velocidade de atendimento
+
+
+
+
+## Conclusao Resultado Esperado
+
+•	Redução significativa de custos de TI e logística
+•	Processos mais rápidos e confiáveis
+•	Melhor visibilidade ponta a ponta da cadeia de distribuição
+•	Capacidade de escalar rapidamente conforme novos distribuidores entram
+
+
+## Anexos
+
+DiagramaFarmaceuticas.txt
+
+
+Responsável : Fernando Iwamizu
